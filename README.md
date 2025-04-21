@@ -41,6 +41,7 @@ A modern movie search application built with React, TypeScript, and Material UI.
 - `npm run build` - Build the production-ready application
 - `npm run lint` - Run ESLint to check for code quality issues
 - `npm run format` - Format code using Prettier
+- `npm run test` - Run tests using Vitest
 - `npm run preview` - Preview the production build locally
 
 ## Project Structure

@@ -71,7 +71,7 @@ export function NavBar() {
         >
           {isMobile ? (
             <img
-              src="../assets/movienator-logo.svg"
+              src="/src/assets/movienator-logo.svg"
               alt="Movienator"
               height="32"
             />
@@ -100,7 +100,9 @@ export function NavBar() {
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Enter at least 3 characters to search…"
-              inputProps={{ 'aria-label': 'Enter at least 3 characters to search…' }}
+              inputProps={{
+                'aria-label': 'Enter at least 3 characters to search…',
+              }}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />

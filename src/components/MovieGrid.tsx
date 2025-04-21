@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 
 import { Movie } from '@types';
 
+import noPreviewImage from '../assets/no_preview.png';
 import {
   FavoriteButton,
   GridContainer,
@@ -68,7 +69,7 @@ export function MovieGrid({
           ) : (
             <NoImage
               sx={{
-                backgroundImage: `url(${'../assets/no_preview.png'})`,
+                backgroundImage: `url(${noPreviewImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}

@@ -8,7 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint --config eslint.config.mjs .",
     "format": "prettier --config prettier.config.cjs --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --experimental-vm-modules node_modules/vitest/vitest.mjs",
+    "test:coverage": "node --experimental-vm-modules node_modules/vitest/vitest.mjs run --coverage",
+    "test:ui": "node --experimental-vm-modules node_modules/vitest/vitest.mjs --ui"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -26,6 +29,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^22.14.1",
     "@types/react": "^19.0.10",
@@ -35,8 +41,11 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "jsdom": "^26.1.0",
+    "msw": "^2.7.5",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
-    "vite": "^6.3.1"
+    "vite": "^6.3.1",
+    "vitest": "^3.1.2"
   }
 }

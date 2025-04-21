@@ -12,6 +12,7 @@ import Rating from '@mui/material/Rating';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
+import noPreviewImage from '@/assets/no_preview.png';
 import { useMovieDetailData } from '@/features/movies/useMovieDetailData';
 import { useToast } from '@/hooks';
 
@@ -118,7 +119,7 @@ export function MovieDetail() {
                     height: '100%',
                     bgcolor: 'background.paper',
                     minHeight: '300px',
-                    backgroundImage: `url(${'../assets/no_preview.png'})`,
+                    backgroundImage: `url(${noPreviewImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
