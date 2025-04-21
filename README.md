@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+# Movienator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern movie search application built with React, TypeScript, and Material UI. Movienator allows users to search for movies, view detailed information, and save their favorites for later viewing.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Search for movies using The Movie Database API
+- View detailed information about movies
+- Save favorite movies for quick access
+- Responsive design works on both desktop and mobile
+- Theme-aware UI with smooth transitions
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- Vite
+- Material UI 7
+- React Router 7
+- TanStack React Query for data fetching and caching
+- Axios for API requests
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version specified in `.nvmrc`)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Available Scripts
+
+- `npm run dev` - Start the development server with hot reload
+- `npm run build` - Build the production-ready application
+- `npm run lint` - Run ESLint to check for code quality issues
+- `npm run format` - Format code using Prettier
+- `npm run preview` - Preview the production build locally
+
+## Project Structure
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+src/
+  ├── assets/         # Static assets like images
+  ├── components/     # Reusable UI components
+  ├── features/       # Feature-specific functionality
+  ├── hooks/          # Custom React hooks
+  ├── lib/            # Utilities and configuration
+  ├── pages/          # Page components for routing
+  ├── theme/          # Theme configuration
+  └── types/          # TypeScript type definitions
 ```
