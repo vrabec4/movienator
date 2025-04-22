@@ -67,7 +67,7 @@ export function MovieSearch() {
             {shouldShowLogo && (
               <LogoContainer>
                 <Logo
-                  src="/src/assets/movienator-logo.svg"
+                  src="/movienator-logo.svg"
                   alt="Movienator Logo"
                 />
               </LogoContainer>

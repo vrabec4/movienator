@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/omdb/:match*",
+      "destination": "https://www.omdbapi.com/:match*?apikey=74a9d0bd"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
+}

@@ -71,7 +71,7 @@ export function NavBar() {
         >
           {isMobile ? (
             <img
-              src="/src/assets/movienator-logo.svg"
+              src="/movienator-logo.svg"
               alt="Movienator"
               height="32"
             />

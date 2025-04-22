@@ -1,11 +1,12 @@
 import axios, { AxiosInstance } from 'axios';
 
-const BASE_URL =
-  import.meta.env.MODE === 'development'
-    ? '/api/omdb'
-    : import.meta.env.VITE_API_BASE_URL || 'https://www.omdbapi.com/';
+const BASE_URL = '/api/omdb';
 
-const API_KEY = import.meta.env.VITE_API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY || '';
+
+if (import.meta.env.DEV && !API_KEY) {
+  console.warn('WARNING: OMDB API key is missing! Set VITE_API_KEY in .env file.');
+}
 
 export const api: AxiosInstance = axios.create({
   baseURL: BASE_URL,
@@ -18,9 +19,11 @@ export const api: AxiosInstance = axios.create({
 });
 
 api.interceptors.request.use((config) => {
-  config.params = {
-    apikey: API_KEY,
-    ...config.params,
-  };
+  if (import.meta.env.DEV) {
+    config.params = {
+      apikey: API_KEY,
+      ...config.params,
+    };
+  }
   return config;
 });
